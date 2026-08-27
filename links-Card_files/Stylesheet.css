@@ -1,0 +1,91 @@
+.circular_image{
+    border-radius: 50%;
+}
+
+body{
+    font: 'Overlock';
+    font-family: 'Overlock';
+    background: black;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    color: gold;
+    text-align: center;
+}
+
+.app{
+     width: 13%;
+     height: 13%;
+ }
+
+.border{
+     border-radius: 25%;
+     max-width: 33%;
+    height: auto;
+}
+
+.border:hover{
+    
+        box-shadow: 5px 5px 25px 1px rgba(0,0,0,0.25);
+        transform:scale(1.25);
+    
+}
+
+.responsive {
+    padding: 0 6px;
+    float: center;
+    width: 13.6%;
+  }
+  
+  @media only screen and (max-width: 700px){
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px){
+    .responsive {
+      width: 100%;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    text-emphasis-color: white;
+    
+}
+
+
+button{
+    font-family: 'Overlock';
+    font-size: 24px;
+    transition: 0.3s linear;
+    
+    padding: 14px 14px;
+    margin-left: 0.5rem ;
+    margin-right: 0.5rem ;
+    }
+
+    /*CUSTOM VARIABLES HERE*/
+.modal { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--black);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+  }
