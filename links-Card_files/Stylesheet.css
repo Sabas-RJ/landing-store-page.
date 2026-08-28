@@ -89,3 +89,13 @@ button{
     opacity: 0;
     transition: all 0.35s ease-in;
   }
+
+  flex{
+    flex-wrap: wrap;
+    border: 15px white;
+    justify-content: center;
+  }
+  @keyframes pulse {
+    from  {box-shadow: 0 0 0 0 forestgreen;}
+    to    {box-shadow: 0 0 0 15 gray;}
+  }
