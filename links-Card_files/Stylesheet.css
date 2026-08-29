@@ -95,7 +95,21 @@ button{
     border: 15px white;
     justify-content: center;
   }
+  
   @keyframes pulse {
-    from  {box-shadow: 0 0 0 0 forestgreen;}
-    to    {box-shadow: 0 0 0 15 gray;}
+    from  {box-shadow: 0 0 0 0 #22c55eb3;}
+    to    {box-shadow: 0 0 0 14 #22c55e00;}
+  }
+  @keyframes slide {to {transform: translateX(-50%)} }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background: #22c55e;
+    animation: pulse 1.0s cubic-bezier ( 0 , 0, .35, 1) infinite;
+  }
+  .track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
   }
