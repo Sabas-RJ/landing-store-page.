@@ -100,8 +100,29 @@ button{
     from  {box-shadow: 0 0 0 0 #22c55eb3;}
     to    {box-shadow: 0 0 0 14 #22c55e00;}
   }
-  @keyframes slide {to {transform: translateX(-50%)} }
-  .dot {
+
+.slide-to-left {
+  transform: translateX(100%);
+  animation: slideLeft 1s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translateX(0);
+  }
+}
+.slide-in {
+  transform: translateY(100%);
+  animation: slidein 1s ease-out forwards;
+}
+
+@keyframes slidein {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.dot {
     width: 10px;
     height: 10px;
     border-radius:50%;
@@ -113,3 +134,15 @@ button{
     width: max-content;
     will-change: transform;
   }
+
+.scene { perspective: 800px; display: grid; place-items: center; height: 50vh; background: #0f1219; }
+.ring { display: grid; transform-style: preserve-3d; animation: turn 20s linear infinite; }
+.ring div {
+grid-area: 1/1;
+width: 150px; height: 200px;
+display: grid; place-items: center;
+background: #1a2030; border: 1px solid #f5a55c; border-radius: 10px;
+color: #f5a55c; font: 700 1rem sans-serif;
+transform: rotateY(calc(var(--i) * 45deg)) translateZ(210px);
+}
+@keyframes turn { to { transform: rotateY(360deg) } }
